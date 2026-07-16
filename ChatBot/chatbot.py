@@ -23,8 +23,17 @@ graph.add_edge(START,"ChatBotNode")
 graph.add_edge("ChatBotNode",END)
 
 workflow=graph.compile()
-initial_state={
-    "messages":"Hi"
-}
-result=workflow.invoke(initial_state)
-print(result["messages"][-1].content)
+# initial_state={
+#     "messages":"Hi"
+# }
+# result=workflow.invoke(initial_state)
+# print(result["messages"][-1].content)
+
+while True:
+    user_input=input("User:")
+    if user_input== "quit" or user_input=="exit":
+        break
+    else:
+        initial_state={"messages":user_input}
+        result=workflow.invoke(initial_state)
+        print("AI:",result["messages"][-1].content)
