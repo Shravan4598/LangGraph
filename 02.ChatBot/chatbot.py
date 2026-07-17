@@ -36,20 +36,20 @@ checkpointer=MemorySaver()
 
 chatbot=graph.compile(checkpointer=checkpointer)
 
-thread_id="1"
+# thread_id="1"
 
-config={
-    "configurable":{
-        "thread_id":thread_id
-    }
-}
+# config={
+#     "configurable":{
+#         "thread_id":thread_id
+#     }
+# }
 
-while True:
-    user_input=input("User:")
-    if user_input== "quit" or user_input=="exit":
-        print("Goodbye,Take care.")
-        break
-    else:
-        initial_state={"messages":[HumanMessage(content=user_input)]}
-        result=chatbot.invoke(initial_state,config=config)
-        print("AI:",result["messages"][-1].content)
+# while True:
+#     user_input=input("User:")
+#     if user_input== "quit" or user_input=="exit":
+#         print("Goodbye,Take care.")
+#         break
+#     else:
+#         initial_state={"messages":[HumanMessage(content=user_input)]}
+#         result=chatbot.invoke(initial_state,config=config)
+#         print("AI:",result["messages"][-1].content)
