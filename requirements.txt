@@ -3,4 +3,5 @@ langgraph
 langchain-google-genai
 langchain-core
 dotenv
+streamlit
 -e.
