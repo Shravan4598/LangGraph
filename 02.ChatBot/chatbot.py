@@ -1,6 +1,8 @@
 from langgraph.graph import StateGraph,START,END
 from langgraph.graph.message import BaseMessage,add_messages
 from langchain_core.messages import HumanMessage,AIMessage
+from langchain_core.tools import tool
+#from langchain_community import 
 from typing import Annotated,TypedDict,Literal
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
